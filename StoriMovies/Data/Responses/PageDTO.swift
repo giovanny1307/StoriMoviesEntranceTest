@@ -8,8 +8,8 @@
 import Foundation
 
 struct PageDTO: Decodable {
-    var page: Int
-    var results: [MovieDTO]
+    let page: Int
+    let results: [MovieDTO]
     
     func mapToDomain() -> Page {
         Page(page: page, movies: results.map { dto in dto.mapToDomain() })

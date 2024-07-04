@@ -35,7 +35,7 @@ enum MoviesEndpoint {
             
             return request
         case .getCrewForMovie(let id):
-            let pathURL = MoviesEndpoint.baseURL.appendingPathComponent("/movie/\(id)/credits")
+            let pathURL = MoviesEndpoint.baseURL.appendingPathComponent("movie/\(id)/credits")
             var components = URLComponents(url: pathURL, resolvingAgainstBaseURL: true)!
             let queryItems: [URLQueryItem] = [
               URLQueryItem(name: "language", value: "en-US"),

@@ -32,12 +32,15 @@ enum ViewControllerCreator{
             viewController.viewModel = viewModel
             
             return viewController
-        default:
-            return UIViewController()
+        case .actorsList(let movieId):
+            let urlSessionClient = URLSessionHttpClient(urlSession: .shared)
+            let remoteRepository = RemoteActorsRepository(remoteDataSource: urlSessionClient)
+            let viewModel = ActorsViewModel(remoteRepository: remoteRepository,
+                                            movieId: movieId)
+            let viewController = ActorsTableViewController()
+            viewController.viewModel = viewModel
+            
+            return viewController
         }
     }
 }
-
-
-
-

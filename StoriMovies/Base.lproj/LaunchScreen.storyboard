@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Rubik-ExtraBold.ttf">
-            <string>Rubik-ExtraBold</string>
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -22,8 +22,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StoriMovies🎞️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nr0-Ff-Tyx">
-                                <rect key="frame" x="46" y="368" width="301" height="116.33333333333331"/>
-                                <fontDescription key="fontDescription" name="Rubik-ExtraBold" family="Rubik" pointSize="49"/>
+                                <rect key="frame" x="46" y="366.66666666666669" width="301" height="118.66666666666669"/>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="50"/>
                                 <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

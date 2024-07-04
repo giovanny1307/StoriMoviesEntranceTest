@@ -165,8 +165,11 @@ final class MovieDetailViewController: UIViewController {
     }
     
     private func handleShowActors(with id: Int) {
-        let modalViewController = PopUpViewController()
-        modalViewController.modalPresentationStyle = .overFullScreen
+        let modalViewController = ViewControllerCreator.actorsList(movieId: id).createViewController()
+        
+        if let presentationController = modalViewController.presentationController as? UISheetPresentationController {
+            presentationController.detents = [.medium()]
+             }
 
         self.navigationController?.present(modalViewController, animated: true)
     }
