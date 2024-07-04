@@ -17,7 +17,8 @@ class HttpClientMock: HttpClient {
 
         if let error = requestResponse?.error {
             throw error
-        } else if let data = requestResponse?.response?.0, let response = requestResponse?.response?.1 {
+        } else if let data = requestResponse?.response?.0, 
+                  let response = requestResponse?.response?.1 {
             return (data, response)
         }
         

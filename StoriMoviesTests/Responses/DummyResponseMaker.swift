@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import StoriMovies
 
 class DummyResponseMaker {
     
@@ -58,6 +59,45 @@ class DummyResponseMaker {
         return Data(jsonString.utf8)
     }
     
+    static func makeActorsData() -> Data {
+        
+        let jsonString = """
+            {
+              "id": 278,
+              "cast": [
+                {
+                  "adult": false,
+                  "gender": 2,
+                  "id": 504,
+                  "known_for_department": "Acting",
+                  "name": "Tim Robbins",
+                  "original_name": "Tim Robbins",
+                  "popularity": 17.984,
+                  "profile_path": "/djLVFETFTvPyVUdrd7aLVykobof.jpg",
+                  "cast_id": 3,
+                  "character": "Andy Dufresne",
+                  "credit_id": "52fe4231c3a36847f800b131",
+                  "order": 0
+                },
+                {
+                  "adult": false,
+                  "gender": 2,
+                  "id": 192,
+                  "known_for_department": "Acting",
+                  "name": "Morgan Freeman",
+                  "original_name": "Morgan Freeman",
+                  "popularity": 95.93,
+                  "profile_path": "/jPsLqiYGSofU4s6BjrxnefMfabb.jpg",
+                  "cast_id": 4,
+                  "character": "Ellis Boyd 'Red' Redding",
+                  "credit_id": "52fe4231c3a36847f800b135",
+                  "order": 1
+                } ]
+        }
+"""
+        return Data(jsonString.utf8)
+    }
+    
     static func makeInvalidData() -> Data {
         return Data("Invalid_data".utf8)
     }
@@ -67,5 +107,15 @@ class DummyResponseMaker {
                                statusCode: statusCode,
                                httpVersion: nil,
                                headerFields: [:])!
+    }
+    
+    static func makeDummyMovie() -> Movie {
+        .init(id: 1,
+              rating: 3.0,
+              release_date: "20-12-2009",
+              poster_url_string: "someurl.co",
+              landscape_poster_url_string: "someurl.co",
+              name: "The life of gio",
+              description: "Gio is amazing")
     }
 }

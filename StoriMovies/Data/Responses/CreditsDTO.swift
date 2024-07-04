@@ -8,14 +8,15 @@
 import Foundation
 
 struct CreditsDTO:Decodable {
-    var id: Int
-    var cast: [CastDTO]
+    let id: Int
+    let cast: [CastDTO]
 }
 
 struct CastDTO:Decodable {
-    var name: String
-    var profile_path: String
-    var character: String
+    let id: Int
+    let name: String
+    let profile_path: String
+    let character: String
     
     func mapToDomain() -> Actor {
         Actor(name: name,

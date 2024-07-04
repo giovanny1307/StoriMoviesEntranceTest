@@ -37,6 +37,11 @@
 		9DCAF9E52C360F2B00D611DB /* RemoteTopMoviesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9E42C360F2B00D611DB /* RemoteTopMoviesRepositoryTest.swift */; };
 		9DCAF9E82C3616F800D611DB /* HttpClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9E72C3616F800D611DB /* HttpClientMock.swift */; };
 		9DCAF9EB2C3619DC00D611DB /* DummyResponseMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9EA2C3619DC00D611DB /* DummyResponseMaker.swift */; };
+		9DCAF9ED2C362A6100D611DB /* LocalMoviesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9EC2C362A6100D611DB /* LocalMoviesRepositoryTests.swift */; };
+		9DCAF9EF2C362D5800D611DB /* RemoteActorsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9EE2C362D5700D611DB /* RemoteActorsRepositoryTests.swift */; };
+		9DCAF9F12C36334A00D611DB /* TopMoviesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9F02C36334A00D611DB /* TopMoviesViewModelTests.swift */; };
+		9DCAF9F32C36336C00D611DB /* RemoteTopMoviesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9F22C36336C00D611DB /* RemoteTopMoviesRepositoryMock.swift */; };
+		9DCAF9F52C36341200D611DB /* LocalMoviesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCAF9F42C36341200D611DB /* LocalMoviesRepositoryMock.swift */; };
 		9DE210C52C320CAC005C838F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE210C42C320CAC005C838F /* AppDelegate.swift */; };
 		9DE210C72C320CAC005C838F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE210C62C320CAC005C838F /* SceneDelegate.swift */; };
 		9DE210C92C320CAC005C838F /* TopMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE210C82C320CAC005C838F /* TopMoviesTableViewController.swift */; };
@@ -125,6 +130,11 @@
 		9DCAF9E42C360F2B00D611DB /* RemoteTopMoviesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTopMoviesRepositoryTest.swift; sourceTree = "<group>"; };
 		9DCAF9E72C3616F800D611DB /* HttpClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
 		9DCAF9EA2C3619DC00D611DB /* DummyResponseMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyResponseMaker.swift; sourceTree = "<group>"; };
+		9DCAF9EC2C362A6100D611DB /* LocalMoviesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMoviesRepositoryTests.swift; sourceTree = "<group>"; };
+		9DCAF9EE2C362D5700D611DB /* RemoteActorsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteActorsRepositoryTests.swift; sourceTree = "<group>"; };
+		9DCAF9F02C36334A00D611DB /* TopMoviesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesViewModelTests.swift; sourceTree = "<group>"; };
+		9DCAF9F22C36336C00D611DB /* RemoteTopMoviesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTopMoviesRepositoryMock.swift; sourceTree = "<group>"; };
+		9DCAF9F42C36341200D611DB /* LocalMoviesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMoviesRepositoryMock.swift; sourceTree = "<group>"; };
 		9DE210C12C320CAC005C838F /* StoriMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoriMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE210C42C320CAC005C838F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DE210C62C320CAC005C838F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -280,17 +290,12 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		9DCAF9E32C35FDCD00D611DB /* Spies */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Spies;
-			sourceTree = "<group>";
-		};
 		9DCAF9E62C3616E700D611DB /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				9DCAF9E72C3616F800D611DB /* HttpClientMock.swift */,
+				9DCAF9F22C36336C00D611DB /* RemoteTopMoviesRepositoryMock.swift */,
+				9DCAF9F42C36341200D611DB /* LocalMoviesRepositoryMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -344,8 +349,10 @@
 			children = (
 				9DCAF9E92C3618C700D611DB /* Responses */,
 				9DCAF9E62C3616E700D611DB /* Mocks */,
-				9DCAF9E32C35FDCD00D611DB /* Spies */,
 				9DCAF9E42C360F2B00D611DB /* RemoteTopMoviesRepositoryTest.swift */,
+				9DCAF9EC2C362A6100D611DB /* LocalMoviesRepositoryTests.swift */,
+				9DCAF9EE2C362D5700D611DB /* RemoteActorsRepositoryTests.swift */,
+				9DCAF9F02C36334A00D611DB /* TopMoviesViewModelTests.swift */,
 			);
 			path = StoriMoviesTests;
 			sourceTree = "<group>";
@@ -617,8 +624,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DCAF9ED2C362A6100D611DB /* LocalMoviesRepositoryTests.swift in Sources */,
+				9DCAF9F12C36334A00D611DB /* TopMoviesViewModelTests.swift in Sources */,
+				9DCAF9F52C36341200D611DB /* LocalMoviesRepositoryMock.swift in Sources */,
 				9DCAF9EB2C3619DC00D611DB /* DummyResponseMaker.swift in Sources */,
 				9DCAF9E82C3616F800D611DB /* HttpClientMock.swift in Sources */,
+				9DCAF9F32C36336C00D611DB /* RemoteTopMoviesRepositoryMock.swift in Sources */,
+				9DCAF9EF2C362D5800D611DB /* RemoteActorsRepositoryTests.swift in Sources */,
 				9DCAF9E52C360F2B00D611DB /* RemoteTopMoviesRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
