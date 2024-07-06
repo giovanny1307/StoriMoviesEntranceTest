@@ -26,7 +26,7 @@ struct CastDTO: Codable {
     let character: String
     let creditID: String
     let order: Int
-    
+
     func mapToDomain() -> Actor {
         Actor(name: name,
               character_name: character,
